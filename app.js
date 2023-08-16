@@ -1,3 +1,15 @@
+
+// const express = require('express');
+// const app = express();
+// const moviesrouter = require('./routes/movies.router');
+
+
+// app.use(express.json());
+// app.use('/movies', moviesrouter);
+
+// module.exports = app;
+
+
 const express = require('express');
 const app = express();
 
@@ -62,10 +74,9 @@ app.get('/movies/:title', (req, res) => {
       } else {
         res.status(404).json({ message: 'Movie not found' });
       }
-    } else {
-      res.status(400).json({ message: 'Title parameter is required' });
-    }
+    } 
   });
+
   
 //searching movie by id
 app.get('/movies/:id', (req, res) => {
